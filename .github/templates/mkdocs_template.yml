@@ -8,25 +8,27 @@ edit_uri: ""
 use_directory_urls: true
 docs_dir: .
 theme:
+  font: false
   name: material
   language: zh
   features:
     - content.code.annotate
     # - content.tabs.link
     # - header.autohide
-    #- navigation.expand
-    #- navigation.indexes
+    # - navigation.expand
+    # - navigation.indexes
     - navigation.instant
     - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - navigation.footer
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-    # # - toc.integrate
+    # - toc.integrate
   search_index_only: true
   palette:
     - media: "(prefers-color-scheme: light)"
@@ -69,6 +71,12 @@ markdown_extensions:
 plugins:
   - same-dir
   - search
+  - with-pdf:
+      author: GitHub Community
+      copyright: The Unlicense
+      cover_title: How To Cook
+      cover_subtitle: 程序员做饭指南
+      output_path: document.pdf
   - minify:
       minify_html: true
 
